@@ -1,1 +1,62 @@
+## ✅ How to Clone Dataship Development Template within Google Drive
 
+### 📦 Prerequisites
+- Google Drive for Desktop installed
+- GitHub account
+- Git installed locally
+- Access to the `My Drive` location on your machine
+- The main project folder with `00 - FINAL DELIVERABLE` and `01 - DEVELOPMENT` subfolders already set up
+
+### 🛠️ Step 1: Install Google Drive for Desktop
+- Download from: [Google Drive for Desktop](https://www.google.com/drive/download/)
+- Sign in with the same Google account used for Colab.
+- Choose either 'Stream' or 'Mirror' files.
+
+### 🛠️ Step 2: Sync the Project Folder to Google Drive
+- Access the shared folder or create a new folder named `# - Project Name - TEMPLATE` under your project structure in My Drive:
+  - `My Drive/# - Project Name - TEMPLATE`
+
+### 🛠️ Step 3: Navigate to the `01 - DEVELOPMENT` Folder using command line or terminal on mac
+- The `01 - DEVELOPMENT` folder already exists within the project structure handed to you. Navigate to it using the following command:
+  ```bash
+  cd ~/Library/CloudStorage/GoogleDrive-your_email@gmail.com/My\ Drive/#\ -\ Project\ Name\ -\ TEMPLATE
+  
+  cd "01 - DEVELOPMENT"  # Navigate to the development folder where the repository will be cloned
+  ```
+
+### 🛠️ Step 4: Clone the Repository
+- Ensure the `01 - DEVELOPMENT` folder is empty before cloning:
+  ```bash
+  cd ~/Library/CloudStorage/GoogleDrive-your_email@gmail.com/My\ Drive/#\ -\ Project\ Name\ -\ TEMPLATE/01\ -\ DEVELOPMENT
+  git clone https://github.com/abualfaki/Datship-Development-Template.git .
+  ```
+
+### 🛠️ Step 5: Set Up Git Remotes
+- Verify the current remotes:
+  ```bash
+  git remote -v
+  ```
+- If the remote is not set or needs to be updated:
+  ```bash
+  git remote add origin https://github.com/abualfaki/Datship-Development-Template.git
+  ```
+
+### 🛠️ Step 6: Create a New Branch (Optional but Recommended especially if working with multiple developers)
+  ```bash
+  git checkout -b development
+  ```
+
+### 🛠️ Step 7: Push Initial Commit
+  ```bash
+  git add .
+  git commit -m "Initial commit with folder structure"
+  git push -u origin development
+  ```
+
+### 🛠️ You should now see all the folders in the Datship-Development-Template repo in your Google Drive.
+
+### ✅ Notes and Best Practices
+- Ensure the project folder is located in `My Drive` for sync to work properly.
+- Use `.gitignore` to exclude unnecessary files like `.DS_Store` and Colab checkpoints.
+- Always use feature branches for specific tasks to avoid conflicts.
+- Verify the folder structure before proceeding with any data uploads or script executions.
